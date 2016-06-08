@@ -35,11 +35,72 @@ AppAsset::register($this);
         ],
     ]);
     $menuItems = [
-        
-        ['label' => 'Home', 'url' => ['/site/index']],
-        ['label' => 'About', 'url' => ['/site/about']],
-        ['label' => 'Contact', 'url' => ['/site/contact']],
+        [
+            'label' => 'Empresas', 
+            //'url' => ['/site/index']
+            'items' => [
+                 ['label' => 'Crear Empresa', 'url' => '#'],
+                 '<li class="divider"></li>',
+                 '<li class="dropdown-header">Dropdown Header</li>',
+                 ['label' => 'Catalogo de Empresas', 'url' => '#'],
+            ],
+        ],
+        [
+            'label' => 'Parametros', 
+            //'url' => ['/site/index']
+            'items' => [
+                '<li class="dropdown-header">Tipo de Cambio</li>',
+                 ['label' => 'Crear Tipo Cambio', 'url' => '#'],
+                 ['label' => 'Historico Tipo Cambio', 'url' => '#'],
+                 '<li class="divider"></li>',
+                 '<li class="dropdown-header">UFV</li>',
+                 [
+                     'label' => 'Crear UFV', 
+                     'url' => Yii::$app->urlManager->createAbsoluteUrl('').'parametros/ufv/create',
+                 ],
+                 [
+                     'label' => 'Historico UFV', 
+                     'url' => Yii::$app->urlManager->createAbsoluteUrl('').'parametros/ufv/index'
+                 ],
+            ],
+        ],
+        [
+            'label' => 'Home', 
+            'url' => ['/site/index']
+        ],
+        [
+            'label' => 'About', 
+            'url' => ['/site/about']
+        ],
+        [
+            'label' => 'Contact', 
+            'url' => ['/site/contact']
+        ],
     ];
+   /* echo Nav::widget([
+    'items' => [
+            [
+                'label' => 'Home',
+                'url' => ['site/index'],
+                'linkOptions' => [],
+            ],
+            [
+                'label' => 'Dropdown',
+                'items' => [
+                     ['label' => 'Level 1 - Dropdown A', 'url' => '#'],
+                     '<li class="divider"></li>',
+                     '<li class="dropdown-header">Dropdown Header</li>',
+                     ['label' => 'Level 1 - Dropdown B', 'url' => '#'],
+                ],
+            ],
+            [
+                'label' => 'Login',
+                'url' => ['site/login'],
+                'visible' => Yii::$app->user->isGuest
+            ],
+        ],
+        'options' => ['class' =>'nav-pills'], // set this to nav-tab to get tab-styled navigation
+    ]);*/
     if (Yii::$app->user->isGuest) {
         $menuItems[] = ['label' => 'Signup', 'url' => ['/site/signup']];
         $menuItems[] = ['label' => 'Login', 'url' => ['/site/login']];

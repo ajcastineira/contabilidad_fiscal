@@ -1,16 +1,16 @@
 <?php
 
-namespace frontend\modules\empresa;
+namespace backend\modules\parametros;
 
 /**
- * empresa module definition class
+ * parametros module definition class
  */
-class Empresa extends \yii\base\Module
+class Parametros extends \yii\base\Module
 {
     /**
      * @inheritdoc
      */
-    public $controllerNamespace = 'frontend\modules\empresa\controllers';
+    public $controllerNamespace = 'backend\modules\parametros\controllers';
 
     /**
      * @inheritdoc

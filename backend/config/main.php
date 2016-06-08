@@ -12,16 +12,12 @@ return [
     'controllerNamespace' => 'backend\controllers',
     'bootstrap' => ['log'],
     'modules' => [
-        /*'rbac' =>  [
-            'class' => 'johnitvn\rbacplus\Module',
-            'userModelClassName'=>null,
-            'userModelIdField'=>'id',
-            'userModelLoginField'=>'username',
-            'userModelLoginFieldLabel'=>null,
-            'userModelExtraDataColumls'=>null,
-            'beforeCreateController'=>null,
-            'beforeAction'=>null
-        ],*/ 
+        'empresa' => [
+            'class' => 'backend\modules\empresa\Empresa',
+        ],
+        'parametros' => [
+            'class' => 'backend\modules\parametros\Parametros',
+        ],
     ],
     'components' => [
         'user' => [

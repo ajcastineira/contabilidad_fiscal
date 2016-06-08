@@ -11,11 +11,7 @@ return [
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
     'controllerNamespace' => 'frontend\controllers',
-    'modules' => [
-        'empresa' => [
-            'class' => 'frontend\modules\empresa\Empresa',
-        ],
-    ],
+    'modules' => [],
     'components' => [
         'user' => [
             'identityClass' => 'common\models\User',

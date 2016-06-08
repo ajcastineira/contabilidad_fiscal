@@ -7,6 +7,7 @@ return [
         ],
         'authManager' => [
             'class' => 'yii\rbac\DbManager',
+            //'cache' => 'cache',
         ],
     ],
     'modules' => [
@@ -24,6 +25,6 @@ return [
         'gridview' => [
             'class' => '\kartik\grid\Module',
         ],
-        
+
     ],
 ];

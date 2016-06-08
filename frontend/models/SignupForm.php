@@ -53,6 +53,16 @@ class SignupForm extends Model
         $user->setPassword($this->password);
         $user->generateAuthKey();
         
-        return $user->save() ? $user : null;
+        
+        //return $user->save() ? $user : null;
+        
+        if($user->save()){
+            $auth=  \Yii::$app->authManager;
+            $authRole=$auth->getRole('Invitado');
+            $auth->assign($authRole, $user->getId());
+        }else{
+            $user=null;
+        }
+        return $user;
     }
 }
