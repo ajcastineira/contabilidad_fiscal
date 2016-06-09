@@ -35,8 +35,7 @@ AppAsset::register($this);
         ],
     ]);
     $menuItems = [
-        
-        
+
         [
             'label' => 'Empresas', 
             //'url' => ['/site/index']
